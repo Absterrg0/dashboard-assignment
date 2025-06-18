@@ -14,6 +14,8 @@ import StepProgress from "./step-progress";
 import SleepTracking from "./sleep-tracking";
 import CalorieTracker from "./calorie-tracker";
 import MacrosChart from "./macros-chart";
+import TodoListComponent from "./todo-list-component";
+import TableStackDetails from "./table-stack-details";
 
 export default function Dashboard() {
   return (
@@ -32,6 +34,12 @@ export default function Dashboard() {
           </div>
           <div className="col-span-10 md:col-span-5 lg:col-span-6 row-span-2">
             <CalorieTracker />
+          </div>
+          <div className="col-span-10 md:col-span-5 lg:col-span-4 row-span-1">
+            <TodoListComponent />
+          </div>
+          <div className="col-span-10 md:col-span-5 lg:col-span-10 row-span-1">
+            <TableStackDetails />
           </div>
         </div>
       </div>

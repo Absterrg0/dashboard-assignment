@@ -1,0 +1,323 @@
+{
+  "macros": {
+    "last24hrs": [
+      {
+        "date": "2024-01-30",
+        "protein": 85,
+        "carbs": 220,
+        "fat": 65,
+        "sugar": 45,
+        "fiber": 28
+      },
+      {
+        "date": "2024-01-31",
+        "protein": 92,
+        "carbs": 195,
+        "fat": 58,
+        "sugar": 38,
+        "fiber": 32
+      }
+    ],
+    "last7days": [
+      {
+        "date": "2024-01-01",
+        "protein": 88,
+        "carbs": 210,
+        "fat": 62,
+        "sugar": 42,
+        "fiber": 30
+      },
+      {
+        "date": "2024-01-02",
+        "protein": 95,
+        "carbs": 185,
+        "fat": 55,
+        "sugar": 35,
+        "fiber": 35
+      },
+      {
+        "date": "2024-01-03",
+        "protein": 82,
+        "carbs": 225,
+        "fat": 68,
+        "sugar": 48,
+        "fiber": 25
+      },
+      {
+        "date": "2024-01-04",
+        "protein": 90,
+        "carbs": 200,
+        "fat": 60,
+        "sugar": 40,
+        "fiber": 28
+      },
+      {
+        "date": "2024-01-05",
+        "protein": 87,
+        "carbs": 215,
+        "fat": 63,
+        "sugar": 43,
+        "fiber": 31
+      },
+      {
+        "date": "2024-01-06",
+        "protein": 93,
+        "carbs": 190,
+        "fat": 57,
+        "sugar": 37,
+        "fiber": 33
+      },
+      {
+        "date": "2024-01-07",
+        "protein": 85,
+        "carbs": 205,
+        "fat": 61,
+        "sugar": 41,
+        "fiber": 29
+      }
+    ],
+    "last1month": [
+      {
+        "date": "2024-01-01",
+        "protein": 88,
+        "carbs": 210,
+        "fat": 62,
+        "sugar": 42,
+        "fiber": 30
+      },
+      {
+        "date": "2024-01-02",
+        "protein": 95,
+        "carbs": 185,
+        "fat": 55,
+        "sugar": 35,
+        "fiber": 35
+      },
+      {
+        "date": "2024-01-03",
+        "protein": 82,
+        "carbs": 225,
+        "fat": 68,
+        "sugar": 48,
+        "fiber": 25
+      },
+      {
+        "date": "2024-01-04",
+        "protein": 90,
+        "carbs": 200,
+        "fat": 60,
+        "sugar": 40,
+        "fiber": 28
+      },
+      {
+        "date": "2024-01-05",
+        "protein": 87,
+        "carbs": 215,
+        "fat": 63,
+        "sugar": 43,
+        "fiber": 31
+      },
+      {
+        "date": "2024-01-06",
+        "protein": 93,
+        "carbs": 190,
+        "fat": 57,
+        "sugar": 37,
+        "fiber": 33
+      },
+      {
+        "date": "2024-01-07",
+        "protein": 85,
+        "carbs": 205,
+        "fat": 61,
+        "sugar": 41,
+        "fiber": 29
+      },
+      {
+        "date": "2024-01-08",
+        "protein": 91,
+        "carbs": 195,
+        "fat": 59,
+        "sugar": 39,
+        "fiber": 34
+      },
+      {
+        "date": "2024-01-09",
+        "protein": 86,
+        "carbs": 220,
+        "fat": 64,
+        "sugar": 44,
+        "fiber": 27
+      },
+      {
+        "date": "2024-01-10",
+        "protein": 94,
+        "carbs": 180,
+        "fat": 54,
+        "sugar": 34,
+        "fiber": 36
+      },
+      {
+        "date": "2024-01-11",
+        "protein": 89,
+        "carbs": 208,
+        "fat": 61,
+        "sugar": 41,
+        "fiber": 30
+      },
+      {
+        "date": "2024-01-12",
+        "protein": 96,
+        "carbs": 175,
+        "fat": 52,
+        "sugar": 32,
+        "fiber": 37
+      },
+      {
+        "date": "2024-01-13",
+        "protein": 83,
+        "carbs": 230,
+        "fat": 69,
+        "sugar": 49,
+        "fiber": 24
+      },
+      {
+        "date": "2024-01-14",
+        "protein": 92,
+        "carbs": 188,
+        "fat": 56,
+        "sugar": 36,
+        "fiber": 35
+      },
+      {
+        "date": "2024-01-15",
+        "protein": 88,
+        "carbs": 212,
+        "fat": 63,
+        "sugar": 42,
+        "fiber": 31
+      },
+      {
+        "date": "2024-01-16",
+        "protein": 97,
+        "carbs": 170,
+        "fat": 51,
+        "sugar": 31,
+        "fiber": 38
+      },
+      {
+        "date": "2024-01-17",
+        "protein": 84,
+        "carbs": 218,
+        "fat": 65,
+        "sugar": 45,
+        "fiber": 26
+      },
+      {
+        "date": "2024-01-18",
+        "protein": 93,
+        "carbs": 192,
+        "fat": 58,
+        "sugar": 38,
+        "fiber": 34
+      },
+      {
+        "date": "2024-01-19",
+        "protein": 90,
+        "carbs": 202,
+        "fat": 60,
+        "sugar": 40,
+        "fiber": 32
+      },
+      {
+        "date": "2024-01-20",
+        "protein": 98,
+        "carbs": 165,
+        "fat": 49,
+        "sugar": 30,
+        "fiber": 39
+      },
+      {
+        "date": "2024-01-21",
+        "protein": 85,
+        "carbs": 225,
+        "fat": 67,
+        "sugar": 47,
+        "fiber": 25
+      },
+      {
+        "date": "2024-01-22",
+        "protein": 91,
+        "carbs": 198,
+        "fat": 59,
+        "sugar": 39,
+        "fiber": 33
+      },
+      {
+        "date": "2024-01-23",
+        "protein": 87,
+        "carbs": 215,
+        "fat": 64,
+        "sugar": 43,
+        "fiber": 29
+      },
+      {
+        "date": "2024-01-24",
+        "protein": 95,
+        "carbs": 182,
+        "fat": 55,
+        "sugar": 35,
+        "fiber": 36
+      },
+      {
+        "date": "2024-01-25",
+        "protein": 82,
+        "carbs": 228,
+        "fat": 68,
+        "sugar": 48,
+        "fiber": 24
+      },
+      {
+        "date": "2024-01-26",
+        "protein": 89,
+        "carbs": 205,
+        "fat": 61,
+        "sugar": 41,
+        "fiber": 30
+      },
+      {
+        "date": "2024-01-27",
+        "protein": 96,
+        "carbs": 178,
+        "fat": 53,
+        "sugar": 33,
+        "fiber": 37
+      },
+      {
+        "date": "2024-01-28",
+        "protein": 84,
+        "carbs": 222,
+        "fat": 66,
+        "sugar": 46,
+        "fiber": 26
+      },
+
+      {
+        "date": "2024-01-29",
+        "protein": 91,
+        "carbs": 195,
+        "fat": 59,
+        "sugar": 39,
+        "fiber": 31
+      },
+      {
+        "date": "2024-01-30",
+        "protein": 88,
+        "carbs": 208,
+        "fat": 62,
+        "sugar": 42,
+        "fiber": 28
+      }
+    ]
+  }
+}

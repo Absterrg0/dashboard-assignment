@@ -1,82 +1,182 @@
+"use client"
+
+import { usePathname } from "next/navigation"
 import {
-    Sidebar,
-    SidebarContent,
-    SidebarFooter,
-    SidebarGroup,
-    SidebarGroupContent,
-    SidebarGroupLabel,
-    SidebarHeader,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-  } from "@/components/ui/sidebar"
-import Image from "next/image"
-import { Calendar, CalendarClock, CheckSquare, CreditCard, Home, Link, LogOut, MessageSquare } from "lucide-react"
+  Calendar,
+  Home,
+  Inbox,
+  Search,
+  Settings,
+  Users,
+  BarChart3,
+  FileText,
+  Mail,
+  ShoppingCart,
+  CreditCard,
+  Bell,
+  Package,
+  Truck,
+} from "lucide-react"
+
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarHeader,
+  SidebarFooter,
+} from "@/components/ui/sidebar"
 import { UserProfilePopover } from "./user-profile-popover"
-
-
-const sidebarItems = [
-    {
-        title: "Home",
-        url: "",
-        icon: Home,
-    },
-    {
-        title: "Calendar",
-        url: "/calendar",
-        icon: Calendar,
-    },
-    {
-        title: "Chats",
-        url: "/chats",
-        icon: MessageSquare,
-    },
-    {
-        title: "Payments",
-        url: "/payments",
-        icon: CreditCard,
-    },
-    {
-        title: "Appointments",
-        url: "/appointments",
-        icon: CalendarClock,
-    },
-    {
-        title: "To-Do List",
-        url: "/todo",
-        icon: CheckSquare,
-    },
+import Image from "next/image"  
+const menuItems = [
+  {
+    title: "Home",
+    url: "/",
+    icon: Home,
+    id: "home",
+  },
+  {
+    title: "Todo",
+    url: "/todo",
+    icon: Inbox,
+    id: "todo",
+  },
+  {
+    title: "Calendar",
+    url: "/calendar",
+    icon: Calendar,
+    id: "calendar",
+  },
+  {
+    title: "Search",
+    url: "/search",
+    icon: Search,
+    id: "search",
+  },
 ]
-  
-  export function AppSidebar() {
-    return (
-        <Sidebar variant="inset">
-        <SidebarContent>
-            <SidebarHeader>
-                <div className="flex items-center justify-start ml-4 ">
-                    <Image src="/logo.png" alt="logo" width={100} height={100} />
-                </div>
-            </SidebarHeader>
-          <SidebarGroup>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {sidebarItems.map((item) => (
-                  <SidebarMenuItem className="py-2" key={item.title}>
-                    <SidebarMenuButton  className="p-4 " asChild>
-                      <a href={item.url}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </SidebarContent>
-        <SidebarFooter>
-                <UserProfilePopover />
-        </SidebarFooter>
-      </Sidebar>
-    )
-  }
+
+const businessItems = [
+  {
+    title: "Orders",
+    url: "/orders",
+    icon: ShoppingCart,
+    id: "orders",
+  },
+  {
+    title: "Products",
+    url: "/products",
+    icon: Package,
+    id: "products",
+  },
+  {
+    title: "Shipping",
+    url: "/shipping",
+    icon: Truck,
+    id: "shipping",
+  },
+  {
+    title: "Payments",
+    url: "/payments",
+    icon: CreditCard,
+    id: "payments",
+  },
+]
+
+const communicationItems = [
+  {
+    title: "Messages",
+    url: "/messages",
+    icon: Mail,
+    id: "messages",
+  },
+  {
+    title: "Notifications",
+    url: "/notifications",
+    icon: Bell,
+    id: "notifications",
+  },
+  {
+    title: "Reports",
+    url: "/reports",
+    icon: FileText,
+    id: "reports",
+  },
+]
+
+export function AppSidebar() {
+  const pathname = usePathname()
+
+  return (
+    <Sidebar variant="inset">
+      <SidebarHeader>
+        <div className="px-2 py-4 flex items-center justify-center">
+          <Image className="invert " src="/logo.png" alt="logo" width={100} height={100} />
+        </div>
+      </SidebarHeader>
+
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Main Navigation</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {menuItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <a href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Business</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {businessItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <a href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Communication</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {communicationItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <a href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+
+      <SidebarFooter className="border-t border-sidebar-border p-4">
+            <UserProfilePopover />
+          </SidebarFooter>
+    </Sidebar>
+  )
+}

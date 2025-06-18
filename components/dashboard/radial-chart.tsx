@@ -20,17 +20,28 @@ import {
 
 export const description = "A mixed bar chart"
 
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+interface MacroData {
+  nutrient: string;
+  grams: number;
+  fill: string;
+}
+
+interface ChartBarMixedProps {
+  data?: MacroData[];
+  config?: ChartConfig;
+}
+
+const defaultChartData = [
+  { nutrient: "chrome", grams: 275, fill: "var(--color-chrome)" },
+  { nutrient: "safari", grams: 200, fill: "var(--color-safari)" },
+  { nutrient: "firefox", grams: 187, fill: "var(--color-firefox)" },
+  { nutrient: "edge", grams: 173, fill: "var(--color-edge)" },
+  { nutrient: "other", grams: 90, fill: "var(--color-other)" },
 ]
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
+const defaultChartConfig = {
+  grams: {
+    label: "Grams",
   },
   chrome: {
     label: "Chrome",
@@ -54,33 +65,33 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartBarMixed() {
+export function ChartBarMixed({ data = defaultChartData, config = defaultChartConfig }: ChartBarMixedProps) {
   return (
-    <ChartContainer config={chartConfig}>
+    <ChartContainer config={config}>
     <BarChart
       accessibilityLayer
-      data={chartData}
+      data={data}
       layout="vertical"
       margin={{
         left: 0,
       }}
     >
       <YAxis
-        dataKey="browser"
+        dataKey="nutrient"
         type="category"
         tickLine={false}
         tickMargin={10}
         axisLine={false}
         tickFormatter={(value) =>
-          chartConfig[value as keyof typeof chartConfig]?.label
+          config[value as keyof typeof config]?.label || value
         }
       />
-      <XAxis dataKey="visitors" type="number" hide />
+      <XAxis dataKey="grams" type="number" hide />
       <ChartTooltip
         cursor={false}
         content={<ChartTooltipContent hideLabel />}
       />
-      <Bar dataKey="visitors" layout="vertical" radius={5} />
+      <Bar dataKey="grams" layout="vertical" radius={5} />
     </BarChart>
   </ChartContainer>
   )
