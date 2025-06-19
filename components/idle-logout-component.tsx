@@ -9,7 +9,7 @@ import { AlertTriangle, Clock } from 'lucide-react';
 
 export function IdleLogout({
   timeout = 15 * 60 * 1000, // 15 mins
-  warningTimeout = 10 * 60 * 1000, // 10 mins for modal auto-redirect
+  warningTimeout = 10 * 1000, // 10 mins for modal auto-redirect
 }: {
   timeout?: number;
   warningTimeout?: number;

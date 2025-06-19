@@ -112,7 +112,14 @@ export function AppSidebar() {
     <Sidebar variant="inset">
       <SidebarHeader>
         <div className="px-2 py-4 flex items-center justify-center">
-          <Image priority  className="invert " src="/logo.png" alt="logo" width={100} height={100} />
+          <Image
+            priority
+            className=""
+            src="/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </div>
     </SidebarHeader>
 

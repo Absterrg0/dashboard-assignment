@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html,
+body {
+  overflow-x: hidden;
+  
+}
+
+
 :root {
   --background: #fff9f5;
   --foreground: #3d3436;
