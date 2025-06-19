@@ -1,4 +1,3 @@
-import { SidebarTrigger } from "../ui/sidebar";
 import { ModeToggle } from "./theme-toggle-button";
 
 

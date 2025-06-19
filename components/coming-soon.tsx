@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "./ui/card";
-import { Clock, Rocket, Sparkles } from "lucide-react";
+import { Rocket, Sparkles } from "lucide-react";
 
 interface ComingSoonProps {
   title?: string;

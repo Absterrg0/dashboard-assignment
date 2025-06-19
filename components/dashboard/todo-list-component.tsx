@@ -48,7 +48,7 @@ export default function TodoListComponent() {
       <Card className="h-[260px]">
         <CardHeader className="">
           <div className="flex items-center justify-between">
-            <CardTitle className="text-lg font-semibold">Your ToDo's</CardTitle>
+            <CardTitle className="text-lg font-semibold">Your ToDo&apos;s</CardTitle>
             <Button size="sm" className="h-8 px-3" onClick={() => setDialogOpen(true)}>
               <Plus className="h-4 w-4 mr-1" />
               Add Task
@@ -77,7 +77,7 @@ export default function TodoListComponent() {
                         : "text-foreground"
                     }`}
                   >
-                    {todo.text}
+                  {todo.text}
                   </span>
                 </div>
               ))}

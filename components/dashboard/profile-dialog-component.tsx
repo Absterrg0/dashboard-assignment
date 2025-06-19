@@ -22,7 +22,9 @@ import {
   Camera
 } from "lucide-react";
 import Image from "next/image";
-
+import { useSession } from "next-auth/react";
+import { toast } from "sonner";
+  
 interface ProfileDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -32,23 +34,19 @@ export default function ProfileDialogComponent({
   open,
   onOpenChange,
 }: ProfileDialogProps) {
+  const {data:session} = useSession()
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState({
-    name: "John Doe",
-    email: "john.doe@example.com",
+    name: session?.user?.name || "",
+    email: session?.user?.email || "",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
     joinDate: "January 2024",
-    healthGoal: "Weight Management",
-    currentWeight: "75 kg",
-    targetWeight: "70 kg",
-    fitnessLevel: "Intermediate"
   });
 
   const handleSave = () => {
     setIsEditing(false);
-    // Here you would typically save to your backend
-    console.log("Profile updated:", profileData);
+    toast.success("Profile updated")
   };
 
   const handleCancel = () => {
@@ -83,7 +81,7 @@ export default function ProfileDialogComponent({
               <div className="flex items-center gap-4">
                 <div className="relative">
                   <Image
-                    src="https://i.pravatar.cc/500"
+                    src={session?.user?.image || ""}
                     alt="Profile picture"
                     width={80}
                     height={80}

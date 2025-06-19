@@ -117,17 +117,17 @@ export default function StepProgress() {
             <span className="text-lg font-bold text-primary px-3 py-1 rounded-md shadow-sm">
               {stepMetrics.currentSteps.toLocaleString()}
               {selectedPeriod === "last-24-hours" && (
-                <span className="text-muted-foreground font-medium">/{stepMetrics.dailyGoal.toLocaleString()}</span>
+              <span className="text-muted-foreground font-medium">/{stepMetrics.dailyGoal.toLocaleString()}</span>
               )}
               <span className="text-xs font-normal text-muted-foreground ml-1">{displayText.stepsLabel}</span>
             </span>
           </div>
           <div className="mt-2 relative">
-            <Progress value={stepMetrics.progressPercentage} className="h-3 rounded-full bg-muted" />
+            <Progress  value={stepMetrics.progressPercentage} className="h-3 rounded-full bg-muted-foreground/20 transition-all duration-300" />
             <div className="absolute inset-0 top-3 flex justify-between items-center pointer-events-none">
-              <div className="left-0 absolute h-4 w-[2px] bg-gradient-to-b from-transparent to-primary" />
-              <div className="left-1/2 -translate-x-1/2 absolute h-4 w-[2px] bg-gradient-to-b from-transparent to-primary" />
-              <div className="right-0 absolute h-4 w-[2px] bg-gradient-to-b from-transparent to-primary" />
+              <div className="left-0 absolute h-4 w-[1px] bg-gradient-to-b from-transparent to-primary/50" />
+              <div className="left-1/2 -translate-x-1/2 absolute h-4 w-[1px] bg-gradient-to-b from-transparent to-primary/50" />
+              <div className="right-0 absolute h-4 w-[1px] bg-gradient-to-b from-transparent to-primary/50" />
             </div>
           </div>
           <div className="flex items-center mt-1 justify-between text-xs text-muted-foreground font-medium">

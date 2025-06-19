@@ -2,14 +2,10 @@
 
 import { useState } from "react";
 import { TrendingUp } from "lucide-react";
-import { LabelList, RadialBar, RadialBarChart } from "recharts";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "../ui/select";
 import {
   ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "../ui/chart";
 import { ChartBarMixed } from "./radial-chart";
 import macrosData from "../../lib/data.macros.json";

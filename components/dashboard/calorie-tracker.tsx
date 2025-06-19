@@ -1,11 +1,6 @@
 import { TrendingUp } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "../ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import { ChartAreaInteractive } from "./chart";
-import { Select } from "../ui/select";
-import { SelectTrigger } from "../ui/select";
-import { SelectValue } from "../ui/select";
-import { SelectContent } from "../ui/select";
-import { SelectItem } from "../ui/select";
 
 
 

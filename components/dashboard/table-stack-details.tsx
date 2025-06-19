@@ -124,9 +124,9 @@ export default function TableStackDetails() {
     newExerciseData.splice(dropIndex, 0, draggedItem);
     
     // Reassign IDs sequentially based on new order
-    const reorderedData = newExerciseData.map((exercise, index) => ({
+                    const reorderedData = newExerciseData.map((exercise, idx) => ({
       ...exercise,
-      id: index + 1
+                        id: idx + 1
     }));
     
     setExerciseData(reorderedData);
@@ -219,7 +219,7 @@ export default function TableStackDetails() {
               </tr>
             </thead>
             <tbody>
-              {filteredExercises.map((exercise, index) => {
+              {filteredExercises.map((exercise) => {
                 const originalIndex = exerciseData.indexOf(exercise);
                 return (
                   <tr 

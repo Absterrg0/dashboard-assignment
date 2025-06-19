@@ -6,9 +6,7 @@ import {
   Home,
   Inbox,
   Search,
-  Settings,
-  Users,
-  BarChart3,
+
   FileText,
   Mail,
   ShoppingCart,
@@ -35,25 +33,25 @@ import Image from "next/image"
 const menuItems = [
   {
     title: "Home",
-    url: "/",
+    url: "/home",
     icon: Home,
     id: "home",
   },
   {
     title: "Todo",
-    url: "/todo",
+    url: "/home/todo",
     icon: Inbox,
     id: "todo",
   },
   {
     title: "Calendar",
-    url: "/calendar",
+    url: "/home/calendar",
     icon: Calendar,
     id: "calendar",
   },
   {
     title: "Search",
-    url: "/search",
+    url: "/home/search",
     icon: Search,
     id: "search",
   },
@@ -62,25 +60,25 @@ const menuItems = [
 const businessItems = [
   {
     title: "Orders",
-    url: "/orders",
+    url: "/home/orders",
     icon: ShoppingCart,
     id: "orders",
   },
   {
     title: "Products",
-    url: "/products",
+    url: "/home/products",
     icon: Package,
     id: "products",
   },
   {
     title: "Shipping",
-    url: "/shipping",
+    url: "/home/shipping",
     icon: Truck,
     id: "shipping",
   },
   {
     title: "Payments",
-    url: "/payments",
+    url: "/home/payments",
     icon: CreditCard,
     id: "payments",
   },
@@ -89,19 +87,19 @@ const businessItems = [
 const communicationItems = [
   {
     title: "Messages",
-    url: "/messages",
+    url: "/home/messages",
     icon: Mail,
     id: "messages",
   },
   {
     title: "Notifications",
-    url: "/notifications",
+    url: "/home/notifications",
     icon: Bell,
     id: "notifications",
   },
   {
     title: "Reports",
-    url: "/reports",
+    url: "/home/reports",
     icon: FileText,
     id: "reports",
   },
@@ -114,9 +112,9 @@ export function AppSidebar() {
     <Sidebar variant="inset">
       <SidebarHeader>
         <div className="px-2 py-4 flex items-center justify-center">
-          <Image className="invert " src="/logo.png" alt="logo" width={100} height={100} />
+          <Image priority  className="invert " src="/logo.png" alt="logo" width={100} height={100} />
         </div>
-      </SidebarHeader>
+    </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>

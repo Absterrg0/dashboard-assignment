@@ -49,7 +49,7 @@ export default function TaskDialogComponent({
         <DialogHeader>
           <DialogTitle>Add New Task</DialogTitle>
           <DialogDescription>
-            Create a new task to add to your todo list. Click save when you're done.
+            Create a new task to add to your todo list. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
